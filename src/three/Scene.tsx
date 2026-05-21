@@ -1,6 +1,6 @@
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { PerspectiveCamera, OrbitControls } from '@react-three/drei';
+import { PerspectiveCamera, OrbitControls, AdaptiveDpr, AdaptiveEvents } from '@react-three/drei';
 import Lighting from './lighting/Lighting';
 import Stars from './objects/Stars';
 import GridFloor from './objects/GridFloor';
@@ -14,7 +14,13 @@ import { useScrollStore } from '@/stores/scrollStore';
 
 export default function Scene() {
   const devCameraMode = useScrollStore((s) => s.devCameraMode);
+  const setSceneLoaded = useScrollStore((s) => s.setSceneLoaded);
   const initial = waypoints[0]!;
+
+  useEffect(() => {
+    setSceneLoaded(true);
+    return () => setSceneLoaded(false);
+  }, [setSceneLoaded]);
 
   return (
     <div
@@ -58,6 +64,8 @@ export default function Scene() {
             />
           )}
           <Postprocessing />
+          <AdaptiveDpr pixelated />
+          <AdaptiveEvents />
         </Suspense>
       </Canvas>
     </div>
