@@ -19,3 +19,12 @@ export const waypoints: Waypoint[] = [
   // contact — pulled back & up
   { key: 'contact',    position: [0, 4,   12], lookAt: [0, 0.5, 0] },
 ];
+
+// Camera pose used as the starting frame for the intro dolly.
+// The intro lerps from this to waypoints[0] (hero) over INTRO_DURATION ms.
+export const INTRO_START = {
+  position: [0, 0.6, 14] as [number, number, number],
+  lookAt:   [0, 1.2,  0] as [number, number, number],
+};
+
+export const INTRO_DURATION = 1500; // ms
