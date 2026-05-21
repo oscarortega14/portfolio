@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useLenisScroll } from '@/hooks/useLenisScroll';
+import { useCursorHover } from '@/hooks/useCursorHover';
 import LangSwitch from './LangSwitch';
 
 const SECTIONS = [
@@ -13,6 +14,7 @@ const SECTIONS = [
 export default function Navigation() {
   const { t } = useTranslation();
   const { scrollTo } = useLenisScroll();
+  const cursor = useCursorHover();
 
   const handleClick = (id: string) => (e: React.MouseEvent) => {
     e.preventDefault();
@@ -34,6 +36,7 @@ export default function Navigation() {
         onClick={handleClick('hero')}
         className="font-mono text-sm uppercase tracking-[3px]"
         style={{ color: 'var(--cyan-100)', textShadow: 'var(--cyan-glow)' }}
+        {...cursor}
       >
         OO<span style={{ color: 'var(--cyan-400)' }}>/</span>2026
       </a>
@@ -46,6 +49,7 @@ export default function Navigation() {
             onClick={handleClick(s.id)}
             className="font-mono text-xs uppercase tracking-widest transition-colors hover:opacity-100"
             style={{ color: 'var(--cyan-300)', opacity: 0.7 }}
+            {...cursor}
           >
             {t(s.key)}
           </a>

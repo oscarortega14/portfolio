@@ -1,7 +1,9 @@
 import { useTranslation } from 'react-i18next';
+import { useCursorHover } from '@/hooks/useCursorHover';
 
 export default function Footer() {
   const { t } = useTranslation();
+  const cursor = useCursorHover();
   const year = new Date().getFullYear();
 
   return (
@@ -21,6 +23,7 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: 'var(--cyan-400)' }}
+          {...cursor}
         >
           David Heckhoff's portfolio (2025)
         </a>{' '}

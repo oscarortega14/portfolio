@@ -1,9 +1,11 @@
 import { useTranslation } from 'react-i18next';
+import { useCursorHover } from '@/hooks/useCursorHover';
 
 const LOCALES = ['en', 'es'] as const;
 
 export default function LangSwitch() {
   const { i18n } = useTranslation();
+  const cursor = useCursorHover();
   const current = i18n.language.startsWith('es') ? 'es' : 'en';
 
   return (
@@ -21,6 +23,7 @@ export default function LangSwitch() {
               opacity: active ? 1 : 0.5,
               textShadow: active ? 'var(--cyan-glow)' : 'none',
             }}
+            {...cursor}
           >
             {loc}
           </button>
