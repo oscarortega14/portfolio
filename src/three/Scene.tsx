@@ -5,6 +5,8 @@ import Lighting from './lighting/Lighting';
 import Stars from './objects/Stars';
 import GridFloor from './objects/GridFloor';
 import Astronaut from './objects/Astronaut';
+import Satellite from './objects/Satellite';
+import Particles from './objects/Particles';
 import Postprocessing from './effects/Postprocessing';
 import CameraRig, { CameraDebugPublisher } from './camera/CameraRig';
 import { waypoints } from './camera/waypoints';
@@ -21,8 +23,6 @@ export default function Scene() {
         position: 'fixed',
         inset: 0,
         zIndex: devCameraMode ? 20 : 0,
-        // Normal: canvas catches pointer only where no HTML overlay sits above (z stacking).
-        // Dev: canvas above everything to grab OrbitControls input freely.
       }}
     >
       <Canvas
@@ -44,6 +44,8 @@ export default function Scene() {
           <Lighting />
           <Stars />
           <GridFloor />
+          <Particles />
+          <Satellite />
           <Astronaut />
           <CameraRig />
           {devCameraMode && import.meta.env.DEV && <CameraDebugPublisher />}
