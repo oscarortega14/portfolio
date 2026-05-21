@@ -1,4 +1,5 @@
 import { Float } from '@react-three/drei';
+import { useCursorStore } from '@/stores/cursorStore';
 
 // Replace the contents of <AstronautModel /> with `useGLTF('/models/astronaut.glb')`
 // in a later phase when a CC0/CC-BY astronaut model is added to public/models/.
@@ -90,6 +91,8 @@ function AstronautModel() {
 }
 
 export default function Astronaut() {
+  const setThreeHover = useCursorStore((s) => s.setThreeHover);
+
   return (
     <Float
       speed={1.2}
@@ -97,7 +100,17 @@ export default function Astronaut() {
       floatIntensity={0.6}
       position={[0, 0.5, 0]}
     >
-      <AstronautModel />
+      <group
+        onPointerOver={(e) => {
+          e.stopPropagation();
+          setThreeHover(true);
+        }}
+        onPointerOut={() => {
+          setThreeHover(false);
+        }}
+      >
+        <AstronautModel />
+      </group>
     </Float>
   );
 }

@@ -21,7 +21,8 @@ export default function Scene() {
         position: 'fixed',
         inset: 0,
         zIndex: devCameraMode ? 20 : 0,
-        pointerEvents: devCameraMode ? 'auto' : 'none',
+        // Normal: canvas catches pointer only where no HTML overlay sits above (z stacking).
+        // Dev: canvas above everything to grab OrbitControls input freely.
       }}
     >
       <Canvas
