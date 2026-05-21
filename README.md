@@ -86,3 +86,7 @@ rsvg-convert -w 1200 -h 630 public/og-image.svg -o public/og-image.png
 ## Credits & Inspiration
 
 This portfolio was inspired by [David Heckhoff's portfolio (portfolio-2025)](https://david-hckh.com) — a Vue 3 + three.js project that pioneered the scroll-driven 3D experience pattern used here. portfolio-2026 is an independent re-implementation in the React ecosystem with original 3D assets, custom shaders, and a different visual identity. The original project's design and code are credited to David Heckhoff.
+
+### Third-party 3D assets
+
+- **Astronaut model** — [_"astronaut"_](https://skfb.ly/TSBH) by **Carolina P.**, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). File: `public/models/astronaut.glb`.

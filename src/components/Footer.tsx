@@ -29,6 +29,19 @@ export default function Footer() {
         </a>{' '}
         — reimplemented in React with original assets.
       </p>
+      <p className="mt-2">
+        3D astronaut by{' '}
+        <a
+          href="https://skfb.ly/TSBH"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: 'var(--cyan-400)' }}
+          {...cursor}
+        >
+          Carolina P.
+        </a>{' '}
+        (CC BY 4.0).
+      </p>
     </footer>
   );
 }
