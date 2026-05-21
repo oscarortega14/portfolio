@@ -3,7 +3,6 @@ import { Canvas } from '@react-three/fiber';
 import { PerspectiveCamera, OrbitControls, AdaptiveDpr, AdaptiveEvents } from '@react-three/drei';
 import Lighting from './lighting/Lighting';
 import Stars from './objects/Stars';
-import GridFloor from './objects/GridFloor';
 import Astronaut from './objects/Astronaut';
 import Satellite from './objects/Satellite';
 import Particles from './objects/Particles';
@@ -49,7 +48,6 @@ export default function Scene() {
         <Suspense fallback={null}>
           <Lighting />
           <Stars />
-          <GridFloor />
           <Particles />
           <Satellite />
           <Astronaut />
