@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#0a1224"/>
+      <stop offset="100%" stop-color="#050a14"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g stroke="rgba(0, 212, 255, 0.08)" stroke-width="1">
+    <line x1="0" y1="160" x2="1200" y2="160"/>
+    <line x1="0" y1="320" x2="1200" y2="320"/>
+    <line x1="0" y1="480" x2="1200" y2="480"/>
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+
+  <text x="600" y="240" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="56" font-weight="700"
+        text-anchor="middle" fill="#e0fbff" letter-spacing="20" filter="url(#glow)">
+    OO<tspan fill="#22d3ee">/</tspan>2026
+  </text>
+
+  <text x="600" y="370" font-family="system-ui, -apple-system, sans-serif" font-size="80" font-weight="700"
+        text-anchor="middle" fill="#e0fbff" filter="url(#glow)">
+    Oscar Ortega
+  </text>
+
+  <text x="600" y="440" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22"
+        text-anchor="middle" fill="#22d3ee" letter-spacing="6">
+    SENIOR RUBY ON RAILS ENGINEER
+  </text>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" fill="#67e8f9">
+    <text x="430" y="540" text-anchor="middle">RAILS</text>
+    <text x="520" y="540" text-anchor="middle">REACT</text>
+    <text x="615" y="540" text-anchor="middle">TYPESCRIPT</text>
+    <text x="715" y="540" text-anchor="middle">POSTGRES</text>
+    <text x="810" y="540" text-anchor="middle">GCP</text>
+  </g>
+
+  <g stroke="#22d3ee" stroke-width="2" fill="none">
+    <path d="M40 40 L40 80 M40 40 L80 40"/>
+    <path d="M1160 40 L1160 80 M1160 40 L1120 40"/>
+    <path d="M40 590 L40 550 M40 590 L80 590"/>
+    <path d="M1160 590 L1160 550 M1160 590 L1120 590"/>
+  </g>
+</svg>
