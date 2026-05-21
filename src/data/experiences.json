@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "position": 1,
+    "company": "EPAM Systems",
+    "job_title": {
+      "en": "Sr. Ruby on Rails Engineer",
+      "es": "Ingeniero Sr. Ruby on Rails"
+    },
+    "description": {
+      "en": "Part of the external workforce team contributing to a large-scale monolithic Learning Services platform for Google, supporting the app in Ruby on Rails, with increasing ownership toward full responsibility for the application. Maintain and evolve a complex monolithic application built with Ruby on Rails. Implement new features based on internal project requirements. Work with a proprietary UI system built using Web Components integrated with HAML. Refactor and optimize application performance, focusing on scalability and reliability. Use Turbo (Turbo Streams / Turbo Frames) for real-time updates, intelligent page refreshes, and improve UX without heavy frontend frameworks.",
+      "es": "Parte del equipo de fuerza laboral externa que contribuye a una plataforma monolítica de servicios de aprendizaje a gran escala para Google, apoyando la aplicación en Ruby on Rails, con creciente responsabilidad hacia la gestión completa de la aplicación. Mantengo y evoluciono una aplicación monolítica compleja construida con Ruby on Rails. Implemento nuevas funcionalidades basadas en requisitos internos del proyecto. Trabajo con un sistema de UI propietario construido usando Web Components integrado con HAML. Refactorizo y optimizo el rendimiento de la aplicación, enfocándome en escalabilidad y confiabilidad. Uso Turbo (Turbo Streams / Turbo Frames) para actualizaciones en tiempo real, refrescos de página inteligentes y mejora de UX sin frameworks frontend pesados."
+    },
+    "start_date": "2025-07-03",
+    "end_date": null,
+    "location": "Remote",
+    "company_url": "https://www.epam.com",
+    "technologies": [
+      "Ruby on Rails",
+      "Turbo",
+      "Web Components",
+      "HAML",
+      "Google Cloud"
+    ]
+  },
+  {
+    "id": 2,
+    "position": 2,
+    "company": "Fuzati",
+    "job_title": {
+      "en": "Sr. Ruby on Rails Engineer",
+      "es": "Ingeniero Sr. Ruby on Rails"
+    },
+    "description": {
+      "en": "Maintain and enhance a monolithic Ruby on Rails application, implementing new features and improving platform functionality using widely adopted gems such as Devise, Impersonate, Ransack, and Prawn. Worked within an Agile SCRUM environment to manage project workflows and align development efforts with business needs. Implement new features based on client and stakeholder requirements. Build server-side PDFs and reports using Prawn. Improve search and filtering capabilities using Ransack. Manage deployments and server infrastructure via Cloud66, ensuring reliable and consistent delivery. Collaborate closely with stakeholders to translate requirements into scalable and impactful platform features.",
+      "es": "Mantenimiento y mejora de una aplicación monolítica Ruby on Rails, implementando nuevas funcionalidades y mejorando la funcionalidad de la plataforma usando gemas ampliamente adoptadas como Devise, Impersonate, Ransack y Prawn. Trabajé en un entorno Agile SCRUM para gestionar flujos de trabajo de proyectos y alinear esfuerzos de desarrollo con necesidades del negocio. Implemento nuevas funcionalidades basadas en requisitos de clientes y stakeholders. Construyo PDFs y reportes del lado del servidor usando Prawn. Mejoro capacidades de búsqueda y filtrado usando Ransack. Gestiono despliegues e infraestructura de servidores vía Cloud66, asegurando entrega confiable y consistente. Colaboro estrechamente con stakeholders para traducir requisitos en funcionalidades de plataforma escalables e impactantes."
+    },
+    "start_date": "2024-08-03",
+    "end_date": "2025-07-03",
+    "location": "Remote",
+    "company_url": "https://fuzati.com",
+    "technologies": [
+      "Ruby on Rails",
+      "Devise",
+      "Ransack",
+      "Prawn",
+      "Cloud66",
+      "PostgreSQL"
+    ]
+  },
+  {
+    "id": 3,
+    "position": 3,
+    "company": "GFT Technologies",
+    "job_title": {
+      "en": "SSr. Ruby on Rails Engineer",
+      "es": "Ingeniero SSr. Ruby on Rails"
+    },
+    "description": {
+      "en": "Maintenance and evolution of a Ruby on Rails API, including asynchronous job processing, XML handling, integration with external microservices, automated testing with RSpec, and project management through Azure DevOps. Develop and optimize invoice-processing pipelines handling 100,000+ invoices per month, ensuring scalability and reliability. Implement automated tests for controllers and models using RSpec, increasing test coverage from 60% to 80%. Deploy and maintain applications on AWS EC2, leveraging Docker containers to streamline infrastructure and deployments.",
+      "es": "Mantenimiento y evolución de una API Ruby on Rails, incluyendo procesamiento de trabajos asíncronos, manejo de XML, integración con microservicios externos, pruebas automatizadas con RSpec y gestión de proyectos a través de Azure DevOps. Desarrollo y optimización de pipelines de procesamiento de facturas manejando más de 100,000 facturas por mes, asegurando escalabilidad y confiabilidad. Implemento pruebas automatizadas para controladores y modelos usando RSpec, incrementando la cobertura de pruebas del 60% al 80%. Despliego y mantengo aplicaciones en AWS EC2, aprovechando contenedores Docker para optimizar infraestructura y despliegues."
+    },
+    "start_date": "2023-03-03",
+    "end_date": "2024-07-03",
+    "location": "Remote",
+    "company_url": "https://www.gft.com",
+    "technologies": [
+      "Ruby on Rails",
+      "RSpec",
+      "AWS EC2",
+      "Docker",
+      "Azure DevOps",
+      "XML"
+    ]
+  },
+  {
+    "id": 4,
+    "position": 4,
+    "company": "ISWO",
+    "job_title": {
+      "en": "Jr. Ruby on Rails Engineer",
+      "es": "Ingeniero Jr. Ruby on Rails"
+    },
+    "description": {
+      "en": "Develop and maintain a document management platform designed to support ISO certification compliance, contributing across backend, frontend and CI/CD workflows. Build and maintain core features from the stakeholders requirements. Achieve 85% test coverage using Minitest, significantly reducing post-release bugs. Improve frontend interactivity using StimulusJS and enhance UI using CSS/Sass. Implement CI/CD pipelines with GitHub Actions to automate testing and deployments, increasing system reliability. Migrate 70% of views from Rails ERB to React.js, improving performance and overall UX.",
+      "es": "Desarrollo y mantenimiento de una plataforma de gestión de documentos diseñada para soportar cumplimiento de certificación ISO, contribuyendo en backend, frontend y flujos de CI/CD. Construyo y mantengo funcionalidades centrales desde los requisitos de stakeholders. Logro 85% de cobertura de pruebas usando Minitest, reduciendo significativamente bugs post-lanzamiento. Mejoro interactividad del frontend usando StimulusJS y mejoro la UI usando CSS/Sass. Implemento pipelines CI/CD con GitHub Actions para automatizar pruebas y despliegues, incrementando la confiabilidad del sistema. Migro 70% de vistas de Rails ERB a React.js, mejorando rendimiento y UX general."
+    },
+    "start_date": "2020-03-03",
+    "end_date": "2022-02-03",
+    "location": "Remote",
+    "company_url": null,
+    "technologies": [
+      "Ruby on Rails",
+      "React.js",
+      "StimulusJS",
+      "Minitest",
+      "GitHub Actions",
+      "CSS/Sass"
+    ]
+  }
+]

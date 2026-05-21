@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "en": "Web Development",
+      "es": "Desarrollo Web"
+    },
+    "slug": "web-development"
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Mobile Development",
+      "es": "Desarrollo Móvil"
+    },
+    "slug": "mobile-development"
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "DevOps",
+      "es": "DevOps"
+    },
+    "slug": "devops"
+  }
+]

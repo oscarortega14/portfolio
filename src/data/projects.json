@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "title": {
+      "en": "Iswo Academy",
+      "es": "Iswo Academy"
+    },
+    "description": {
+      "en": "A multi-tenant SaaS platform where anyone can launch their own online academy under a custom subdomain. Instructors can create courses, build assignments, issue certificates, and manage their students from a single dashboard. Built with a Ruby on Rails API powering a React frontend, deployed to production at www.iswoacademy.com.",
+      "es": "Una plataforma SaaS multi-tenant donde cualquier persona puede lanzar su propia academia en línea bajo un subdominio personalizado. Los instructores pueden crear cursos, diseñar tareas, emitir certificados y administrar a sus estudiantes desde un solo panel. Construida con una API en Ruby on Rails que alimenta un frontend en React, desplegada en producción en www.iswoacademy.com."
+    },
+    "technologies": [
+      "Ruby on Rails",
+      "React",
+      "PostgreSQL",
+      "Multi-tenant",
+      "Subdomains"
+    ],
+    "github_url": null,
+    "live_url": null,
+    "app_store_url": null,
+    "play_store_url": null,
+    "image_url": "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
+    "published": true,
+    "featured": true,
+    "position": 1
+  },
+  {
+    "id": 2,
+    "title": {
+      "en": "StickerSwap",
+      "es": "StickerSwap"
+    },
+    "description": {
+      "en": "A mobile app for collectors of Panini sticker albums. Track which stickers you own and which are missing, then propose the best trades with other collectors by scanning a QR code that instantly matches duplicates against missing stickers. Built with Expo (React Native) for iOS and Android.",
+      "es": "Una app móvil para coleccionistas de álbumes Panini. Lleva el control de qué stickers tienes y cuáles te faltan, y propón los mejores intercambios con otros coleccionistas escaneando un código QR que cruza al instante los repetidos contra los faltantes. Construida con Expo (React Native) para iOS y Android."
+    },
+    "technologies": [
+      "Expo",
+      "React Native",
+      "TypeScript",
+      "QR Codes"
+    ],
+    "github_url": null,
+    "live_url": null,
+    "app_store_url": "TODO_APP_STORE_URL",
+    "play_store_url": "TODO_PLAY_STORE_URL",
+    "image_url": "https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg",
+    "published": true,
+    "featured": true,
+    "position": 2
+  }
+]
