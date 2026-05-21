@@ -1,6 +1,7 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Scene from '@/three/Scene';
+import CameraDebugOverlay from '@/three/dev/CameraDebugOverlay';
 import Hero from './Hero';
 import About from './About';
 import Experience from './Experience';
@@ -20,6 +21,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <CameraDebugOverlay />
     </>
   );
 }
