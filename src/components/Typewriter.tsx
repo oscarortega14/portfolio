@@ -30,8 +30,11 @@ export default function Typewriter({
     if (!deleting && text === current) {
       timerRef.current = window.setTimeout(() => setDeleting(true), holdMs);
     } else if (deleting && text === '') {
-      setDeleting(false);
-      setPhraseIdx((i) => (i + 1) % phrases.length);
+      // Defer transition to the next tick so we don't setState synchronously inside the effect.
+      timerRef.current = window.setTimeout(() => {
+        setDeleting(false);
+        setPhraseIdx((i) => (i + 1) % phrases.length);
+      }, 200);
     } else if (deleting) {
       timerRef.current = window.setTimeout(() => setText(text.slice(0, -1)), deleteMs);
     } else {
