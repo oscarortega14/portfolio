@@ -3,6 +3,9 @@ import { Mail } from 'lucide-react';
 import { useLenisScroll } from '@/hooks/useLenisScroll';
 import GithubIcon from '@/components/icons/GithubIcon';
 import Tag from '@/components/Tag';
+import HologramButton from '@/components/HologramButton';
+import Typewriter from '@/components/Typewriter';
+import AppearingText from '@/components/AppearingText';
 
 const HERO_SKILLS = ['Ruby on Rails', 'React', 'TypeScript', 'Python'];
 
@@ -18,31 +21,30 @@ export default function Hero() {
   };
 
   return (
-    <section
-      id="hero"
-      className="min-h-screen flex items-center justify-center px-6 relative"
-    >
+    <section id="hero" className="min-h-screen flex items-center justify-center px-6 relative">
       <div className="text-center max-w-4xl">
-        <p
+        <AppearingText
+          as="p"
+          text={t('hero.greeting')}
           className="font-mono uppercase tracking-[4px] text-sm mb-4"
           style={{ color: 'var(--cyan-400)' }}
-        >
-          {t('hero.greeting')}
-        </p>
+        />
 
-        <h1
+        <AppearingText
+          as="h1"
+          text={t('hero.name')}
           className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
           style={{ color: 'var(--cyan-100)', textShadow: 'var(--cyan-glow)' }}
-        >
-          {t('hero.name')}
-        </h1>
+          staggerMs={120}
+          delay={0.15}
+        />
 
         <p
           className="font-mono text-xl md:text-2xl mb-8"
           style={{ color: 'var(--cyan-300)' }}
         >
           <span style={{ color: 'var(--cyan-500)' }}>&gt; </span>
-          {roles[0]}
+          <Typewriter phrases={roles} />
         </p>
 
         <div className="flex flex-wrap justify-center gap-2 mb-10">
@@ -52,30 +54,20 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-wrap justify-center gap-4">
-          <a
-            href="#contact"
-            onClick={handleContactClick}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded font-mono uppercase text-sm tracking-widest transition-colors"
-            style={{
-              background: 'var(--cyan-500)',
-              color: 'var(--bg-base)',
-              boxShadow: 'var(--cyan-glow)',
-            }}
-          >
-            <Mail size={16} />
+          <HologramButton as="a" href="#contact" onClick={handleContactClick} icon={<Mail size={14} />}>
             {t('hero.cta')}
-          </a>
+          </HologramButton>
 
-          <a
+          <HologramButton
+            as="a"
             href="https://github.com/oortega14"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded font-mono uppercase text-sm tracking-widest border transition-colors"
-            style={{ borderColor: 'var(--cyan-400)', color: 'var(--cyan-100)' }}
+            variant="outline"
+            icon={<GithubIcon size={14} />}
           >
-            <GithubIcon size={16} />
             {t('hero.github')}
-          </a>
+          </HologramButton>
         </div>
       </div>
     </section>
