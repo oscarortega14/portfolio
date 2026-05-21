@@ -1,73 +1,34 @@
-# React + TypeScript + Vite
+# portfolio-2026
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site for Oscar Ortega — single-page scroll experience built with React Three Fiber, Tailwind CSS v4, and GSAP-driven scroll animations.
 
-Currently, two official plugins are available:
+## Scripts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the dev server on port 5173 |
+| `npm run build` | Type-check and produce a production build in `dist/` |
+| `npm run preview` | Serve the production build locally |
+| `npm run lint` | Run ESLint |
 
-## React Compiler
+## Tech stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework:** React 19, TypeScript, Vite
+- **Styling:** Tailwind CSS v4 + CSS custom properties (design tokens)
+- **3D:** three.js via `@react-three/fiber`, `@react-three/drei`, `@react-three/postprocessing`
+- **Animations:** GSAP (+ ScrollTrigger), Lenis (smooth scroll), Framer Motion
+- **i18n:** `react-i18next` (en/es)
+- **Routing:** `react-router-dom@7`
 
-## Expanding the ESLint configuration
+## Content
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+All content is mocked in `src/data/` (no backend). Bilingual fields use `{ en, es }` shape:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- `experiences.json` — work history
+- `projects.json` — featured projects
+- `categories.json` — project categories
+- `skills.ts` — typed skills list
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Credits & Inspiration
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This portfolio was inspired by [David Heckhoff's portfolio (portfolio-2025)](https://david-hckh.com) — a Vue 3 + three.js project that pioneered the scroll-driven 3D experience pattern used here. portfolio-2026 is an independent re-implementation in the React ecosystem with original 3D assets, custom shaders, and a different visual identity. The original project's design and code are credited to David Heckhoff.
