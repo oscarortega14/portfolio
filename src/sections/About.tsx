@@ -1,6 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import { Mail } from 'lucide-react';
 import LinkedinIcon from '@/components/icons/LinkedinIcon';
+import HologramCard from '@/components/HologramCard';
+import HologramButton from '@/components/HologramButton';
+import AppearingText from '@/components/AppearingText';
 import { skills } from '@/data/skills';
 
 export default function About() {
@@ -10,22 +13,24 @@ export default function About() {
     <section id="about" className="py-32 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2
+          <AppearingText
+            as="h2"
+            text={t('about.title')}
             className="text-4xl md:text-5xl font-bold mb-6"
             style={{ color: 'var(--cyan-100)' }}
-          >
-            {t('about.title')}
-          </h2>
-          <p
+          />
+          <AppearingText
+            as="p"
+            text={t('about.description')}
             className="text-lg max-w-3xl mx-auto"
             style={{ color: 'var(--cyan-300)' }}
-          >
-            {t('about.description')}
-          </p>
+            staggerMs={30}
+            delay={0.05}
+          />
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div>
+          <HologramCard>
             <h3
               className="text-2xl font-bold mb-6 font-mono uppercase tracking-widest"
               style={{ color: 'var(--cyan-100)' }}
@@ -55,27 +60,27 @@ export default function About() {
                 </div>
               ))}
             </div>
-          </div>
+          </HologramCard>
 
           <div className="flex flex-col gap-4">
-            <a
+            <HologramButton
+              as="a"
               href="https://www.linkedin.com/in/oscardeveloper/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-5 py-3 rounded font-mono uppercase text-sm tracking-widest border"
-              style={{ borderColor: 'var(--cyan-400)', color: 'var(--cyan-100)' }}
+              variant="outline"
+              icon={<LinkedinIcon size={14} />}
             >
-              <LinkedinIcon size={18} />
               {t('about.linkedin')}
-            </a>
-            <a
+            </HologramButton>
+            <HologramButton
+              as="a"
               href="mailto:ortegaoscar14@gmail.com"
-              className="inline-flex items-center gap-3 px-5 py-3 rounded font-mono uppercase text-sm tracking-widest border"
-              style={{ borderColor: 'var(--cyan-400)', color: 'var(--cyan-100)' }}
+              variant="outline"
+              icon={<Mail size={14} />}
             >
-              <Mail size={18} />
               {t('about.contact')}
-            </a>
+            </HologramButton>
           </div>
         </div>
       </div>
