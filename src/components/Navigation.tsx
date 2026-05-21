@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { useLenisScroll } from '@/contexts/LenisProvider';
+import { useLenisScroll } from '@/hooks/useLenisScroll';
 import LangSwitch from './LangSwitch';
 
 const SECTIONS = [

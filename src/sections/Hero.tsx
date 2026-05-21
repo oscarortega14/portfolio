@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Mail } from 'lucide-react';
-import { useLenisScroll } from '@/contexts/LenisProvider';
+import { useLenisScroll } from '@/hooks/useLenisScroll';
 import GithubIcon from '@/components/icons/GithubIcon';
 import Tag from '@/components/Tag';
 

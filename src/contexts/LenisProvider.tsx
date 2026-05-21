@@ -1,11 +1,6 @@
-import { createContext, useContext, useEffect, useRef, type ReactNode } from 'react';
+import { useEffect, useRef, type ReactNode } from 'react';
 import Lenis from 'lenis';
-
-type LenisContextValue = {
-  scrollTo: (target: string | HTMLElement | number, options?: { offset?: number; duration?: number }) => void;
-};
-
-const LenisContext = createContext<LenisContextValue | null>(null);
+import { LenisContext, type LenisContextValue } from './lenisContext';
 
 export function LenisProvider({ children }: { children: ReactNode }) {
   const lenisRef = useRef<Lenis | null>(null);
@@ -38,12 +33,4 @@ export function LenisProvider({ children }: { children: ReactNode }) {
   };
 
   return <LenisContext.Provider value={{ scrollTo }}>{children}</LenisContext.Provider>;
-}
-
-export function useLenisScroll() {
-  const ctx = useContext(LenisContext);
-  if (!ctx) {
-    throw new Error('useLenisScroll must be used inside a LenisProvider');
-  }
-  return ctx;
 }
