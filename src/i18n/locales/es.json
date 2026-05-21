@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "greeting": "HOLA, SOY",
+    "name": "Oscar Ortega",
+    "rolePrefix": "> ",
+    "roles": ["Ingeniero Full-Stack", "Desarrollador Ruby on Rails", "Desarrollador React"],
+    "cta": "Contáctame",
+    "github": "GitHub"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "description": "Ingeniero backend senior enfocado en Ruby on Rails, con experiencia práctica en React, TypeScript e infraestructura en la nube.",
+    "skillsTitle": "Habilidades",
+    "linkedin": "LinkedIn",
+    "contact": "Contacto"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "currentLabel": "Actualidad"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "viewLive": "Demo en vivo",
+    "viewSource": "Código",
+    "appStore": "App Store",
+    "playStore": "Google Play"
+  },
+  "contact": {
+    "title": "Hablemos",
+    "cta": "Envíame un mensaje"
+  },
+  "nav": {
+    "hero": "Inicio",
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "inspired": "Inspirado en"
+  }
+}
