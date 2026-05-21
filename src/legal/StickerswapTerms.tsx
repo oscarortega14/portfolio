@@ -1,10 +1,6 @@
+import LegalLayout from './LegalLayout';
+import { termsContent, LAST_UPDATED } from './legalContent';
+
 export default function StickerswapTerms() {
-  return (
-    <main className="min-h-screen px-6 py-16 max-w-3xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4" style={{ color: 'var(--cyan-100)' }}>
-        StickerSwap — Terms of Service
-      </h1>
-      <p style={{ color: 'var(--cyan-300)' }}>Content coming in a later phase.</p>
-    </main>
-  );
+  return <LegalLayout content={termsContent} lastUpdated={LAST_UPDATED} />;
 }
