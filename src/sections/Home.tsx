@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import Scene from '@/three/Scene';
 import CameraDebugOverlay from '@/three/dev/CameraDebugOverlay';
 import CustomCursor from '@/components/CustomCursor';
+import Preloader from '@/components/Preloader';
 import Hero from './Hero';
 import About from './About';
 import Experience from './Experience';
@@ -23,6 +24,7 @@ export default function Home() {
       </main>
       <Footer />
       <CustomCursor />
+      <Preloader />
       <CameraDebugOverlay />
     </>
   );
