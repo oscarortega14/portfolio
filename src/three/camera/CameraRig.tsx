@@ -1,7 +1,7 @@
 import { useMemo, useRef } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
-import { waypoints } from './waypoints';
+import { waypoints, INTRO_START, INTRO_DURATION } from './waypoints';
 import { easeInOutCubic, clamp01 } from '@/three/utils/easing';
 import { useScrollStore } from '@/stores/scrollStore';
 
@@ -15,8 +15,43 @@ export default function CameraRig() {
   const total = useMemo(() => waypoints.length - 1, []);
 
   useFrame((state) => {
-    const { progress, devCameraMode } = useScrollStore.getState();
+    const { progress, devCameraMode, introState, introStartedAt, finishIntro } =
+      useScrollStore.getState();
+
     if (devCameraMode) return;
+    const cam = state.camera;
+
+    // --- Loading phase: hold at intro-start pose, ignore scroll ---
+    if (introState === 'loading') {
+      posA.current.fromArray(INTRO_START.position);
+      lookA.current.fromArray(INTRO_START.lookAt);
+      cam.position.copy(posA.current);
+      cam.lookAt(lookA.current);
+      return;
+    }
+
+    // --- Intro phase: lerp from intro-start to waypoint[0] over INTRO_DURATION ms ---
+    if (introState === 'intro') {
+      const start = introStartedAt ?? performance.now();
+      const elapsed = performance.now() - start;
+      const t = clamp01(elapsed / INTRO_DURATION);
+      const eased = easeInOutCubic(t);
+
+      posA.current.fromArray(INTRO_START.position);
+      lookA.current.fromArray(INTRO_START.lookAt);
+      const hero = waypoints[0]!;
+      posB.current.fromArray(hero.position);
+      lookB.current.fromArray(hero.lookAt);
+
+      cam.position.lerpVectors(posA.current, posB.current, eased);
+      tmpLook.current.lerpVectors(lookA.current, lookB.current, eased);
+      cam.lookAt(tmpLook.current);
+
+      if (t >= 1) finishIntro();
+      return;
+    }
+
+    // --- Ready phase: scroll-driven (Phase 3 logic) ---
     if (total < 1) return;
 
     const p = clamp01(progress);
@@ -32,19 +67,14 @@ export default function CameraRig() {
     lookA.current.fromArray(a.lookAt);
     lookB.current.fromArray(b.lookAt);
 
-    state.camera.position.lerpVectors(posA.current, posB.current, eased);
+    cam.position.lerpVectors(posA.current, posB.current, eased);
     tmpLook.current.lerpVectors(lookA.current, lookB.current, eased);
-    state.camera.lookAt(tmpLook.current);
+    cam.lookAt(tmpLook.current);
   });
 
   return null;
 }
 
-/**
- * Writes the live camera state to window.__debugCamera so the HTML overlay
- * (outside the Canvas) can display it. Only renders when devCameraMode is on
- * and only in dev builds. Tree-shakes out of production.
- */
 export function CameraDebugPublisher() {
   const camera = useThree((state) => state.camera);
   const forward = useRef(new THREE.Vector3());
