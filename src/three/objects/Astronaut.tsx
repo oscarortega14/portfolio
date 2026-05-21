@@ -5,27 +5,38 @@ import { Float } from '@react-three/drei';
 function AstronautModel() {
   return (
     <group>
-      {/* Helmet */}
+      {/* Helmet shell — dark metallic outer */}
       <mesh position={[0, 1.05, 0]}>
         <sphereGeometry args={[0.42, 32, 32]} />
         <meshStandardMaterial
           color="#0a1224"
           metalness={0.85}
-          roughness={0.15}
-          emissive="#00d4ff"
-          emissiveIntensity={0.15}
+          roughness={0.2}
         />
       </mesh>
 
-      {/* Visor */}
-      <mesh position={[0, 1.08, 0.18]}>
-        <sphereGeometry args={[0.32, 32, 32, 0, Math.PI * 2, 0, Math.PI / 2]} />
+      {/* Visor — flattened ellipsoid embedded in the front of the helmet, glowing cyan */}
+      <mesh position={[0, 1.05, 0.18]} scale={[0.34, 0.26, 0.16]}>
+        <sphereGeometry args={[1, 32, 32]} />
         <meshStandardMaterial
           color="#00d4ff"
-          metalness={1}
+          metalness={0.6}
           roughness={0.05}
           emissive="#00d4ff"
-          emissiveIntensity={0.4}
+          emissiveIntensity={0.9}
+        />
+      </mesh>
+
+      {/* Visor rim — thin dark ring outlining the visor for definition */}
+      <mesh position={[0, 1.05, 0.18]} scale={[0.36, 0.28, 0.16]}>
+        <sphereGeometry args={[1, 32, 32]} />
+        <meshStandardMaterial
+          color="#050a14"
+          metalness={0.9}
+          roughness={0.4}
+          side={2}
+          transparent
+          opacity={0.4}
         />
       </mesh>
 

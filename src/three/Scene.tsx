@@ -23,7 +23,7 @@ export default function Scene() {
         gl={{ antialias: true, alpha: true }}
       >
         <color attach="background" args={[0x050a14]} />
-        <fog attach="fog" args={[0x050a14, 12, 35]} />
+        <fog attach="fog" args={[0x050a14, 35, 140]} />
 
         <Suspense fallback={null}>
           <Lighting />
