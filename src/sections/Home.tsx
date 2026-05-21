@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import Scene from '@/three/Scene';
 import Hero from './Hero';
 import About from './About';
 import Experience from './Experience';
@@ -9,8 +10,9 @@ import Contact from './Contact';
 export default function Home() {
   return (
     <>
+      <Scene />
       <Navigation />
-      <main>
+      <main style={{ position: 'relative', zIndex: 10 }}>
         <Hero />
         <About />
         <Experience />
