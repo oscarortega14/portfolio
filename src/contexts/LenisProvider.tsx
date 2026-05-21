@@ -15,13 +15,22 @@ export function LenisProvider({ children }: { children: ReactNode }) {
 
     lenisRef.current = lenis;
 
+    // Start stopped — Preloader will release once intro completes.
+    lenis.stop();
+
     const handleScroll = ({ progress }: { progress: number }) => {
       useScrollStore.getState().setProgress(progress);
     };
     lenis.on('scroll', handleScroll);
-
-    // Seed initial progress (in case page loads scrolled)
     useScrollStore.getState().setProgress(lenis.progress ?? 0);
+
+    // React to introState changes — start scrolling once ready, stop otherwise.
+    const unsub = useScrollStore.subscribe((state, prev) => {
+      if (state.introState !== prev.introState) {
+        if (state.introState === 'ready') lenis.start();
+        else lenis.stop();
+      }
+    });
 
     let rafId = 0;
     const raf = (time: number) => {
@@ -33,6 +42,7 @@ export function LenisProvider({ children }: { children: ReactNode }) {
     return () => {
       cancelAnimationFrame(rafId);
       lenis.off('scroll', handleScroll);
+      unsub();
       lenis.destroy();
       lenisRef.current = null;
     };
