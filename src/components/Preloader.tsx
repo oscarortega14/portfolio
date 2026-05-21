@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { useProgress } from '@react-three/drei';
 import { useScrollStore } from '@/stores/scrollStore';
 
 const SYNTH_DURATION_MS = 1400;
@@ -15,8 +14,8 @@ const STATUS_LINES = [
 
 export default function Preloader() {
   const introState = useScrollStore((s) => s.introState);
+  const sceneLoaded = useScrollStore((s) => s.sceneLoaded);
   const startIntro = useScrollStore((s) => s.startIntro);
-  const { progress: assetProgress, active: assetsActive } = useProgress();
 
   const [t, setT] = useState(0);
   const [statusIdx, setStatusIdx] = useState(0);
@@ -43,18 +42,12 @@ export default function Preloader() {
   }, []);
 
   useEffect(() => {
-    const ready =
-      t >= 1 &&
-      !assetsActive &&
-      (assetProgress === 0 || assetProgress >= 100);
-
-    if (!ready) return;
-
+    if (!(t >= 1 && sceneLoaded)) return;
     const timer = window.setTimeout(() => {
       startIntro();
     }, Math.max(0, MIN_VISIBLE_MS - SYNTH_DURATION_MS));
     return () => window.clearTimeout(timer);
-  }, [t, assetProgress, assetsActive, startIntro]);
+  }, [t, sceneLoaded, startIntro]);
 
   useEffect(() => {
     if (introState === 'loading') return;
@@ -64,8 +57,7 @@ export default function Preloader() {
 
   if (hidden) return null;
 
-  const displayPct =
-    Math.min(t * 100, assetsActive && assetProgress > 0 ? assetProgress : 100);
+  const displayPct = Math.min(t * 100, sceneLoaded ? 100 : 92);
 
   const fading = introState !== 'loading';
 
