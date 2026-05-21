@@ -1,0 +1,28 @@
+:root {
+  /* Backgrounds */
+  --bg-base:   #050a14;
+  --bg-elev:   #0a1224;
+
+  /* Cyan palette (primary accent) */
+  --cyan-100:  #e0fbff;
+  --cyan-300:  #67e8f9;
+  --cyan-400:  #22d3ee;
+  --cyan-500:  #00d4ff;
+
+  /* Glow / effects */
+  --cyan-glow:        0 0 24px rgba(0, 212, 255, 0.45);
+  --cyan-glow-strong: 0 0 36px rgba(0, 212, 255, 0.65);
+
+  /* Hologram geometry */
+  --hud-corner: 14px;
+
+  /* Easings */
+  --ease-hud: cubic-bezier(0.6, 0, 0.1, 1);
+  --ease-camera: cubic-bezier(0.45, 0, 0.2, 1);
+
+  /* Z-index layers */
+  --z-canvas: 0;
+  --z-content: 10;
+  --z-cursor: 9000;
+  --z-preloader: 9999;
+}
