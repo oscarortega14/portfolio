@@ -19,7 +19,11 @@ export default function Preloader() {
 
   const [t, setT] = useState(0);
   const [statusIdx, setStatusIdx] = useState(0);
-  const [hidden, setHidden] = useState(false);
+  // If we re-mount with the intro already complete (e.g. user navigated
+  // away to a legal page and came back), skip the preloader entirely.
+  const [hidden, setHidden] = useState(
+    () => useScrollStore.getState().introState !== 'loading',
+  );
 
   useEffect(() => {
     const start = performance.now();

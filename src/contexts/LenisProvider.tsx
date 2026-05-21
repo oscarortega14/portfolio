@@ -1,10 +1,21 @@
 import { useEffect, useRef, type ReactNode } from 'react';
+import { useLocation } from 'react-router-dom';
 import Lenis from 'lenis';
 import { LenisContext, type LenisContextValue } from './lenisContext';
 import { useScrollStore } from '@/stores/scrollStore';
 
 export function LenisProvider({ children }: { children: ReactNode }) {
   const lenisRef = useRef<Lenis | null>(null);
+  const location = useLocation();
+
+  // On non-home routes (legal pages), there is no Preloader / Scene to
+  // drive the intro state machine — skip straight to 'ready' so Lenis
+  // unlocks immediately.
+  useEffect(() => {
+    if (location.pathname !== '/') {
+      useScrollStore.getState().finishIntro();
+    }
+  }, [location.pathname]);
 
   useEffect(() => {
     const lenis = new Lenis({
