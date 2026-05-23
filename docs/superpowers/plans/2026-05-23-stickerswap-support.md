@@ -46,7 +46,7 @@ const content = {
   es: {
     title: 'Centro de ayuda',
     subtitle: 'Preguntas frecuentes y contacto',
-    lastUpdatedLabel: 'Última actualización',
+    lastUpdated: 'Última actualización',
     back: 'Volver al inicio',
     intro:
       'Encontrá respuestas a las preguntas más comunes sobre Stickerswap. Si tu duda no aparece acá, escribinos al final de la página.',
@@ -54,7 +54,7 @@ const content = {
   en: {
     title: 'Support Center',
     subtitle: 'Frequently asked questions and contact',
-    lastUpdatedLabel: 'Last updated',
+    lastUpdated: 'Last updated',
     back: 'Back to home',
     intro:
       "Find answers to the most common Stickerswap questions. If your question is not here, contact us at the bottom of the page.",
@@ -89,7 +89,7 @@ export default function StickerswapSupport() {
             {c.subtitle}
           </p>
           <p className="text-xs font-mono" style={{ color: 'var(--cyan-300)', opacity: 0.6 }}>
-            {c.lastUpdatedLabel}: {LAST_UPDATED}
+            {c.lastUpdated}: {LAST_UPDATED}
           </p>
         </header>
 
@@ -196,7 +196,7 @@ const content = {
   es: {
     title: 'Centro de ayuda',
     subtitle: 'Preguntas frecuentes y contacto',
-    lastUpdatedLabel: 'Última actualización',
+    lastUpdated: 'Última actualización',
     back: 'Volver al inicio',
     intro:
       'Encontrá respuestas a las preguntas más comunes sobre Stickerswap. Si tu duda no aparece acá, escribinos al final de la página.',
@@ -305,7 +305,7 @@ const content = {
   en: {
     title: 'Support Center',
     subtitle: 'Frequently asked questions and contact',
-    lastUpdatedLabel: 'Last updated',
+    lastUpdated: 'Last updated',
     back: 'Back to home',
     intro:
       "Find answers to the most common Stickerswap questions. If your question is not here, contact us at the bottom of the page.",
