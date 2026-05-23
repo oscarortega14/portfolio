@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, Mail } from 'lucide-react';
+import { ChevronDown, Mail, Shield, FileText, UserX } from 'lucide-react';
 import HologramCard from '@/components/HologramCard';
 import HologramButton from '@/components/HologramButton';
 import { useLocalized } from '@/hooks/useLocalized';
@@ -141,6 +141,14 @@ const content = {
       ctaBody:
         'Hola, necesito ayuda con:\n\nDescribí el problema:\n\nVersión de la app (Perfil → Acerca de):\nDispositivo y SO:\n',
     },
+    links: {
+      title: 'Enlaces útiles',
+      items: [
+        { to: '/apps/stickerswap/privacy', label: 'Política de privacidad', icon: 'shield' },
+        { to: '/apps/stickerswap/terms', label: 'Términos y condiciones', icon: 'fileText' },
+        { to: '/apps/stickerswap/delete-account', label: 'Eliminar cuenta', icon: 'userX' },
+      ],
+    },
   },
   en: {
     title: 'Support Center',
@@ -259,8 +267,24 @@ const content = {
       ctaBody:
         'Hi, I need help with:\n\nDescribe the problem:\n\nApp version (Profile → About):\nDevice and OS:\n',
     },
+    links: {
+      title: 'Useful links',
+      items: [
+        { to: '/apps/stickerswap/privacy', label: 'Privacy policy', icon: 'shield' },
+        { to: '/apps/stickerswap/terms', label: 'Terms of service', icon: 'fileText' },
+        { to: '/apps/stickerswap/delete-account', label: 'Delete account', icon: 'userX' },
+      ],
+    },
   },
 };
+
+const linkIconMap = {
+  shield: Shield,
+  fileText: FileText,
+  userX: UserX,
+} as const;
+
+type LinkIconName = keyof typeof linkIconMap;
 
 type FaqAccordionProps = {
   category: FaqCategory;
@@ -414,6 +438,32 @@ export default function StickerswapSupport() {
             >
               {c.contact.cta}
             </HologramButton>
+          </HologramCard>
+        </div>
+
+        <div className="mt-8">
+          <HologramCard>
+            <h2 className="text-lg sm:text-xl font-semibold mb-4" style={{ color: 'var(--cyan-400)' }}>
+              {c.links.title}
+            </h2>
+            <ul className="space-y-3">
+              {c.links.items.map((link) => {
+                const Icon = linkIconMap[link.icon as LinkIconName];
+                return (
+                  <li key={link.to}>
+                    <Link
+                      to={link.to}
+                      className="inline-flex items-center gap-3 text-sm sm:text-base"
+                      style={{ color: 'var(--cyan-100)' }}
+                      {...cursor}
+                    >
+                      <Icon size={16} style={{ color: 'var(--cyan-400)' }} />
+                      <span style={{ borderBottom: '1px solid rgba(0,212,255,0.3)' }}>{link.label}</span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
           </HologramCard>
         </div>
 
