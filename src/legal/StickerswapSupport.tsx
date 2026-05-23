@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
+import HologramCard from '@/components/HologramCard';
 import { useLocalized } from '@/hooks/useLocalized';
 import { useCursorHover } from '@/hooks/useCursorHover';
 import { LAST_UPDATED } from './legalContent';
-import HologramCard from '@/components/HologramCard';
 
 type FaqItem =
   | { q: string; a: string }
@@ -240,6 +243,88 @@ const content = {
   },
 };
 
+type FaqAccordionProps = {
+  category: FaqCategory;
+};
+
+function FaqAccordion({ category }: FaqAccordionProps) {
+  const [open, setOpen] = useState<number | null>(null);
+  const cursor = useCursorHover();
+
+  return (
+    <HologramCard>
+      <h2 className="text-lg sm:text-xl font-semibold mb-2" style={{ color: 'var(--cyan-400)' }}>
+        {category.title}
+      </h2>
+      <div>
+        {category.items.map((item, idx) => {
+          const isOpen = open === idx;
+          const panelId = `faq-panel-${category.id}-${idx}`;
+          return (
+            <div
+              key={item.q}
+              style={{ borderTop: idx === 0 ? 'none' : '1px solid rgba(0,212,255,0.12)' }}
+            >
+              <button
+                type="button"
+                onClick={() => setOpen(isOpen ? null : idx)}
+                aria-expanded={isOpen}
+                aria-controls={panelId}
+                className="w-full flex items-center justify-between gap-3 py-4 text-left"
+                style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}
+                {...cursor}
+              >
+                <span className="text-sm sm:text-base font-semibold" style={{ color: 'var(--cyan-100)' }}>
+                  {item.q}
+                </span>
+                <ChevronDown
+                  size={16}
+                  style={{
+                    flexShrink: 0,
+                    color: 'var(--cyan-400)',
+                    transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                    transition: 'transform 200ms ease',
+                  }}
+                />
+              </button>
+              <AnimatePresence initial={false}>
+                {isOpen && (
+                  <motion.div
+                    id={panelId}
+                    role="region"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.2, ease: 'easeOut' }}
+                    style={{ overflow: 'hidden' }}
+                  >
+                    <p
+                      className="pb-4 text-sm leading-relaxed"
+                      style={{ color: 'var(--cyan-100)', opacity: 0.85 }}
+                    >
+                      {'a' in item ? (
+                        item.a
+                      ) : (
+                        <>
+                          {item.aPrefix}
+                          <Link to={item.aLink.to} style={{ color: 'var(--cyan-400)' }} {...cursor}>
+                            {item.aLink.text}
+                          </Link>
+                          {item.aSuffix}
+                        </>
+                      )}
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          );
+        })}
+      </div>
+    </HologramCard>
+  );
+}
+
 export default function StickerswapSupport() {
   const { locale } = useLocalized();
   const cursor = useCursorHover();
@@ -281,40 +366,7 @@ export default function StickerswapSupport() {
 
         <div className="space-y-6">
           {c.faq.map((category) => (
-            <HologramCard key={category.id}>
-              <h2 className="text-lg sm:text-xl font-semibold mb-4" style={{ color: 'var(--cyan-400)' }}>
-                {category.title}
-              </h2>
-              <div>
-                {category.items.map((item, idx) => (
-                  <div
-                    key={item.q}
-                    className="py-3"
-                    style={{ borderTop: idx === 0 ? 'none' : '1px solid rgba(0,212,255,0.12)' }}
-                  >
-                    <p className="font-semibold mb-2" style={{ color: 'var(--cyan-100)' }}>
-                      {item.q}
-                    </p>
-                    <p
-                      className="text-sm leading-relaxed"
-                      style={{ color: 'var(--cyan-100)', opacity: 0.85 }}
-                    >
-                      {'a' in item ? (
-                        item.a
-                      ) : (
-                        <>
-                          {item.aPrefix}
-                          <Link to={item.aLink.to} style={{ color: 'var(--cyan-400)' }} {...cursor}>
-                            {item.aLink.text}
-                          </Link>
-                          {item.aSuffix}
-                        </>
-                      )}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </HologramCard>
+            <FaqAccordion key={category.id} category={category} />
           ))}
         </div>
 
