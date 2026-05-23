@@ -1,7 +1,5 @@
 {
   "rewrites": [
-    { "source": "/((?!assets|favicon\\.svg|og-image\\.svg|robots\\.txt|sitemap\\.xml).*)", "destination": "/index.html" }
-  ],
-  "cleanUrls": true,
-  "trailingSlash": false
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
