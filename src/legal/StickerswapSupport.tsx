@@ -238,7 +238,7 @@ const content = {
       },
     ] satisfies readonly FaqCategory[],
   },
-} as const;
+};
 
 export default function StickerswapSupport() {
   const { locale } = useLocalized();
@@ -280,7 +280,7 @@ export default function StickerswapSupport() {
         </p>
 
         <div className="space-y-6">
-          {(c.faq as unknown as readonly FaqCategory[]).map((category) => (
+          {c.faq.map((category) => (
             <HologramCard key={category.id}>
               <h2 className="text-lg sm:text-xl font-semibold mb-4" style={{ color: 'var(--cyan-400)' }}>
                 {category.title}
@@ -288,7 +288,7 @@ export default function StickerswapSupport() {
               <div>
                 {category.items.map((item, idx) => (
                   <div
-                    key={idx}
+                    key={item.q}
                     className="py-3"
                     style={{ borderTop: idx === 0 ? 'none' : '1px solid rgba(0,212,255,0.12)' }}
                   >
