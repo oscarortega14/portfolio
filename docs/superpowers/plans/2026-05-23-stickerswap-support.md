@@ -563,7 +563,7 @@ function FaqAccordion({ category }: FaqAccordionProps) {
           const panelId = `faq-panel-${category.id}-${idx}`;
           return (
             <div
-              key={idx}
+              key={item.q}
               style={{ borderTop: idx === 0 ? 'none' : '1px solid rgba(0,212,255,0.12)' }}
             >
               <button
