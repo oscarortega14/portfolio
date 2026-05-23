@@ -352,6 +352,10 @@ export default function StickerswapSupport() {
   const cursor = useCursorHover();
   const c = content[locale];
 
+  const mailtoHref = `mailto:${APP_CONTACT_EMAIL}?subject=${encodeURIComponent(
+    c.contact.ctaSubject,
+  )}&body=${encodeURIComponent(c.contact.ctaBody)}`;
+
   return (
     <section className="min-h-screen px-4 sm:px-6 lg:px-8 py-12">
       <div className="max-w-3xl mx-auto">
@@ -405,9 +409,7 @@ export default function StickerswapSupport() {
             </p>
             <HologramButton
               as="a"
-              href={`mailto:${APP_CONTACT_EMAIL}?subject=${encodeURIComponent(
-                c.contact.ctaSubject,
-              )}&body=${encodeURIComponent(c.contact.ctaBody)}`}
+              href={mailtoHref}
               icon={<Mail size={14} />}
             >
               {c.contact.cta}
