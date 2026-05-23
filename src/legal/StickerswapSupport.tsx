@@ -259,7 +259,8 @@ function FaqAccordion({ category }: FaqAccordionProps) {
       <div>
         {category.items.map((item, idx) => {
           const isOpen = open === idx;
-          const panelId = `faq-panel-${category.id}-${idx}`;
+          const buttonId = `faq-btn-${category.id}-${idx}`;
+          const panelId  = `faq-panel-${category.id}-${idx}`;
           return (
             <div
               key={item.q}
@@ -267,6 +268,7 @@ function FaqAccordion({ category }: FaqAccordionProps) {
             >
               <button
                 type="button"
+                id={buttonId}
                 onClick={() => setOpen(isOpen ? null : idx)}
                 aria-expanded={isOpen}
                 aria-controls={panelId}
@@ -292,6 +294,7 @@ function FaqAccordion({ category }: FaqAccordionProps) {
                   <motion.div
                     id={panelId}
                     role="region"
+                    aria-labelledby={buttonId}
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
