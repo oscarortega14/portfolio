@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Mail } from 'lucide-react';
 import HologramCard from '@/components/HologramCard';
+import HologramButton from '@/components/HologramButton';
 import { useLocalized } from '@/hooks/useLocalized';
 import { useCursorHover } from '@/hooks/useCursorHover';
-import { LAST_UPDATED } from './legalContent';
+import { APP_CONTACT_EMAIL, LAST_UPDATED } from './legalContent';
 
 type FaqItem =
   | { q: string; a: string }
@@ -131,6 +132,15 @@ const content = {
         ],
       },
     ] satisfies readonly FaqCategory[],
+    contact: {
+      title: '¿Necesitás más ayuda?',
+      body:
+        'Si tu pregunta no está en las FAQ o necesitás soporte personalizado, escribinos por email. Respondemos dentro de las 48 horas hábiles.',
+      cta: 'Enviar correo',
+      ctaSubject: 'Solicitud de soporte Stickerswap',
+      ctaBody:
+        'Hola, necesito ayuda con:\n\nDescribí el problema:\n\nVersión de la app (Perfil → Acerca de):\nDispositivo y SO:\n',
+    },
   },
   en: {
     title: 'Support Center',
@@ -240,6 +250,15 @@ const content = {
         ],
       },
     ] satisfies readonly FaqCategory[],
+    contact: {
+      title: 'Need more help?',
+      body:
+        "If your question isn't in the FAQ or you need personalized support, write to us by email. We respond within 48 business hours.",
+      cta: 'Send email',
+      ctaSubject: 'Stickerswap support request',
+      ctaBody:
+        'Hi, I need help with:\n\nDescribe the problem:\n\nApp version (Profile → About):\nDevice and OS:\n',
+    },
   },
 };
 
@@ -371,6 +390,29 @@ export default function StickerswapSupport() {
           {c.faq.map((category) => (
             <FaqAccordion key={category.id} category={category} />
           ))}
+        </div>
+
+        <div className="mt-8">
+          <HologramCard>
+            <h2 className="text-lg sm:text-xl font-semibold mb-3" style={{ color: 'var(--cyan-400)' }}>
+              {c.contact.title}
+            </h2>
+            <p
+              className="text-sm sm:text-base leading-relaxed mb-5"
+              style={{ color: 'var(--cyan-100)', opacity: 0.85 }}
+            >
+              {c.contact.body}
+            </p>
+            <HologramButton
+              as="a"
+              href={`mailto:${APP_CONTACT_EMAIL}?subject=${encodeURIComponent(
+                c.contact.ctaSubject,
+              )}&body=${encodeURIComponent(c.contact.ctaBody)}`}
+              icon={<Mail size={14} />}
+            >
+              {c.contact.cta}
+            </HologramButton>
+          </HologramCard>
         </div>
 
         <div
