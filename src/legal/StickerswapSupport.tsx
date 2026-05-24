@@ -23,6 +23,20 @@ type FaqCategory = {
   items: readonly FaqItem[];
 };
 
+const linkIconMap = {
+  shield: Shield,
+  fileText: FileText,
+  userX: UserX,
+} as const;
+
+type LinkIconName = keyof typeof linkIconMap;
+
+type LinkItem = {
+  to: string;
+  label: string;
+  icon: LinkIconName;
+};
+
 const content = {
   es: {
     title: 'Centro de ayuda',
@@ -147,7 +161,7 @@ const content = {
         { to: '/apps/stickerswap/privacy', label: 'Política de privacidad', icon: 'shield' },
         { to: '/apps/stickerswap/terms', label: 'Términos y condiciones', icon: 'fileText' },
         { to: '/apps/stickerswap/delete-account', label: 'Eliminar cuenta', icon: 'userX' },
-      ],
+      ] satisfies readonly LinkItem[],
     },
   },
   en: {
@@ -273,18 +287,10 @@ const content = {
         { to: '/apps/stickerswap/privacy', label: 'Privacy policy', icon: 'shield' },
         { to: '/apps/stickerswap/terms', label: 'Terms of service', icon: 'fileText' },
         { to: '/apps/stickerswap/delete-account', label: 'Delete account', icon: 'userX' },
-      ],
+      ] satisfies readonly LinkItem[],
     },
   },
 };
-
-const linkIconMap = {
-  shield: Shield,
-  fileText: FileText,
-  userX: UserX,
-} as const;
-
-type LinkIconName = keyof typeof linkIconMap;
 
 type FaqAccordionProps = {
   category: FaqCategory;
@@ -448,7 +454,7 @@ export default function StickerswapSupport() {
             </h2>
             <ul className="space-y-3">
               {c.links.items.map((link) => {
-                const Icon = linkIconMap[link.icon as LinkIconName];
+                const Icon = linkIconMap[link.icon];
                 return (
                   <li key={link.to}>
                     <Link
@@ -457,7 +463,7 @@ export default function StickerswapSupport() {
                       style={{ color: 'var(--cyan-100)' }}
                       {...cursor}
                     >
-                      <Icon size={16} style={{ color: 'var(--cyan-400)' }} />
+                      <Icon size={16} aria-hidden="true" style={{ color: 'var(--cyan-400)' }} />
                       <span style={{ borderBottom: '1px solid rgba(0,212,255,0.3)' }}>{link.label}</span>
                     </Link>
                   </li>
