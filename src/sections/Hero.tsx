@@ -60,7 +60,7 @@ export default function Hero() {
 
           <HologramButton
             as="a"
-            href="https://github.com/oortega14"
+            href="https://github.com/oscarortega14"
             target="_blank"
             rel="noopener noreferrer"
             variant="outline"

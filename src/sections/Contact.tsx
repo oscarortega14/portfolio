@@ -59,7 +59,7 @@ export default function Contact() {
             <SocialLink href="https://www.linkedin.com/in/oscardeveloper/" label="LinkedIn">
               <LinkedinIcon size={22} />
             </SocialLink>
-            <SocialLink href="https://github.com/oortega14" label="GitHub">
+            <SocialLink href="https://github.com/oscarortega14" label="GitHub">
               <GithubIcon size={22} />
             </SocialLink>
             <SocialLink href="mailto:ortegaoscar14@gmail.com" label="Email">
