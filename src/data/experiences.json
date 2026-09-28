@@ -41,7 +41,7 @@
       "es": "Construí y mantuve una plataforma educativa para estudiantes K-12 en múltiples estados de EE. UU., impulsando evaluaciones en línea en materias como teología, matemáticas y lectura, y generando reportes de desempeño para docentes y administradores escolares con información basada en datos sobre el progreso de estudiantes y escuelas. Mantuve y mejoré una aplicación monolítica en Ruby on Rails, utilizando gemas como Devise, Impersonate, Ransack y Prawn para construir funcionalidades y optimizar el rendimiento. Desarrollé pruebas unitarias para controllers, models y services usando RSpec, asegurando alta calidad y mantenibilidad del código. Implementé interacciones dinámicas de usuario usando jQuery y JavaScript vanilla, integrando componentes de React.js para funcionalidades específicas cuando fue necesario. Gestioné despliegues de la aplicación e infraestructura de servidores mediante Cloud66, asegurando una entrega fluida y confiable de actualizaciones. Colaboré estrechamente con stakeholders para recopilar y traducir requerimientos del cliente en funcionalidades de alto impacto, dentro de un ambiente Agile Scrum."
     },
     "start_date": "2024-08-03",
-    "end_date": "2025-07-03",
+    "end_date": "2025-06-03",
     "location": "Remote",
     "company_url": "https://fuzati.com",
     "technologies": [
@@ -96,7 +96,7 @@
     "start_date": "2020-03-03",
     "end_date": "2022-02-03",
     "location": "Remote",
-    "company_url": null,
+    "company_url": "https://www.iswo.com.co/",
     "technologies": [
       "Ruby on Rails",
       "React.js",
