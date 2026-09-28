@@ -4,12 +4,12 @@
     "position": 1,
     "company": "EPAM Systems",
     "job_title": {
-      "en": "Sr. Ruby on Rails Engineer",
-      "es": "Ingeniero Sr. Ruby on Rails"
+      "en": "Senior Software Engineer — Ruby on Rails & Python (gRPC)",
+      "es": "Ingeniero de Software Senior — Ruby on Rails & Python (gRPC)"
     },
     "description": {
-      "en": "Part of the external workforce team contributing to a large-scale monolithic Learning Services platform for Google, supporting the app in Ruby on Rails, with increasing ownership toward full responsibility for the application. Maintain and evolve a complex monolithic application built with Ruby on Rails. Implement new features based on internal project requirements. Work with a proprietary UI system built using Web Components integrated with HAML. Refactor and optimize application performance, focusing on scalability and reliability. Use Turbo (Turbo Streams / Turbo Frames) for real-time updates, intelligent page refreshes, and improve UX without heavy frontend frameworks.",
-      "es": "Parte del equipo de fuerza laboral externa que contribuye a una plataforma monolítica de servicios de aprendizaje a gran escala para Google, apoyando la aplicación en Ruby on Rails, con creciente responsabilidad hacia la gestión completa de la aplicación. Mantengo y evoluciono una aplicación monolítica compleja construida con Ruby on Rails. Implemento nuevas funcionalidades basadas en requisitos internos del proyecto. Trabajo con un sistema de UI propietario construido usando Web Components integrado con HAML. Refactorizo y optimizo el rendimiento de la aplicación, enfocándome en escalabilidad y confiabilidad. Uso Turbo (Turbo Streams / Turbo Frames) para actualizaciones en tiempo real, refrescos de página inteligentes y mejora de UX sin frameworks frontend pesados."
+      "en": "Embedded within Google's Cloud Learning Services engineering team (Google Skills / Qwiklabs) as a partner engineer for client Google, owning the core Ruby on Rails monolith alongside production Python (gRPC) backend microservices, Cloud Spanner data layers, and deterministic agent-ready runtime tooling in a distributed Google FTE / partner environment (google3, Buganizer, CL/PR workflows). Maintain and evolve the core Ruby on Rails monolith powering Google Skills / Qwiklabs, using Turbo (Turbo Streams / Turbo Frames) and Web Components integrated with HAML for real-time UX without a heavy frontend framework. Own production Python 3.11 backend development for Google Skills' core cloud provisioning microservice, designing and evolving gRPC API handlers. Manage cloud resource lifecycle microservices on GKE, automating the creation, IAM/SAML provisioning, and cleanup of ephemeral GCP projects backed by Cloud Spanner and Redis. Architect and pitch AI-driven vulnerability remediation proposals to Google engineering stakeholders, prototyping MCP integrations using FastMCP and leading the architectural pivot toward a zero-extra-infrastructure Agentic Skill model. Lead runtime and dependency modernizations (Python 3.11, Protobuf 4.x), improving gRPC reliability, atomic database transactions, and background worker efficiency. Support and optimize frontend applications and UI components, collaborating with cross-functional engineering, UX, and QA teams in an agile environment.",
+      "es": "Integrado al equipo de ingeniería de Cloud Learning Services de Google (Google Skills / Qwiklabs) como ingeniero partner para el cliente Google, a cargo tanto del monolito principal en Ruby on Rails como de microservicios backend en Python (gRPC) en producción, capas de datos en Cloud Spanner, y herramientas de runtime determinísticas listas para agentes, dentro de un entorno distribuido de Google (FTEs y partners) (google3, Buganizer, flujos CL/PR). Mantengo y evoluciono el monolito principal en Ruby on Rails que impulsa Google Skills / Qwiklabs, usando Turbo (Turbo Streams / Turbo Frames) y Web Components integrados con HAML para UX en tiempo real sin necesidad de un framework de frontend pesado. Desarrollo backend en producción con Python 3.11 para el microservicio central de aprovisionamiento en la nube de Google Skills, diseñando y evolucionando manejadores de API gRPC. Gestiono microservicios de ciclo de vida de recursos cloud en GKE, automatizando la creación, el aprovisionamiento IAM/SAML, y la limpieza de proyectos efímeros de GCP respaldados por Cloud Spanner y Redis. Arquitecto y presento propuestas de remediación de vulnerabilidades impulsadas por IA a stakeholders de ingeniería de Google, prototipando integraciones MCP con FastMCP y liderando el pivote arquitectónico hacia un modelo de Agentic Skill sin infraestructura adicional. Lidero modernizaciones de runtime y dependencias (Python 3.11, Protobuf 4.x), mejorando la confiabilidad de gRPC, las transacciones atómicas de base de datos, y la eficiencia de los workers en segundo plano. Apoyo y optimizo aplicaciones frontend y componentes de UI, colaborando con equipos multifuncionales de ingeniería, UX y QA en un ambiente ágil."
     },
     "start_date": "2025-07-03",
     "end_date": null,
@@ -17,8 +17,13 @@
     "company_url": "https://www.epam.com",
     "technologies": [
       "Ruby on Rails",
+      "Python",
+      "gRPC",
+      "GKE",
+      "Cloud Spanner",
+      "Redis",
+      "Protobuf",
       "Turbo",
-      "Web Components",
       "HAML",
       "Google Cloud"
     ]
@@ -28,12 +33,12 @@
     "position": 2,
     "company": "Fuzati",
     "job_title": {
-      "en": "Sr. Ruby on Rails Engineer",
-      "es": "Ingeniero Sr. Ruby on Rails"
+      "en": "Senior Ruby on Rails Engineer",
+      "es": "Ingeniero Senior en Ruby on Rails"
     },
     "description": {
-      "en": "Maintain and enhance a monolithic Ruby on Rails application, implementing new features and improving platform functionality using widely adopted gems such as Devise, Impersonate, Ransack, and Prawn. Worked within an Agile SCRUM environment to manage project workflows and align development efforts with business needs. Implement new features based on client and stakeholder requirements. Build server-side PDFs and reports using Prawn. Improve search and filtering capabilities using Ransack. Manage deployments and server infrastructure via Cloud66, ensuring reliable and consistent delivery. Collaborate closely with stakeholders to translate requirements into scalable and impactful platform features.",
-      "es": "Mantenimiento y mejora de una aplicación monolítica Ruby on Rails, implementando nuevas funcionalidades y mejorando la funcionalidad de la plataforma usando gemas ampliamente adoptadas como Devise, Impersonate, Ransack y Prawn. Trabajé en un entorno Agile SCRUM para gestionar flujos de trabajo de proyectos y alinear esfuerzos de desarrollo con necesidades del negocio. Implemento nuevas funcionalidades basadas en requisitos de clientes y stakeholders. Construyo PDFs y reportes del lado del servidor usando Prawn. Mejoro capacidades de búsqueda y filtrado usando Ransack. Gestiono despliegues e infraestructura de servidores vía Cloud66, asegurando entrega confiable y consistente. Colaboro estrechamente con stakeholders para traducir requisitos en funcionalidades de plataforma escalables e impactantes."
+      "en": "Built and maintained an educational platform for K-12 students across multiple U.S. states, powering online assessments in subjects like theology, math, and reading, and generating performance reports for teachers and school administrators with data-driven insights into student and school-level progress. Maintained and enhanced a monolithic Ruby on Rails application, leveraging gems such as Devise, Impersonate, Ransack, and Prawn to build features and optimize functionality. Developed unit tests for controllers, models, and services using RSpec to ensure high code quality and maintainability. Implemented dynamic user interactions using jQuery and vanilla JavaScript, integrating React.js components for specific features when needed. Managed application deployments and server infrastructure through Cloud66, ensuring smooth, reliable delivery of updates. Collaborated closely with stakeholders to gather and translate client requirements into impactful platform features, within an Agile Scrum environment.",
+      "es": "Construí y mantuve una plataforma educativa para estudiantes K-12 en múltiples estados de EE. UU., impulsando evaluaciones en línea en materias como teología, matemáticas y lectura, y generando reportes de desempeño para docentes y administradores escolares con información basada en datos sobre el progreso de estudiantes y escuelas. Mantuve y mejoré una aplicación monolítica en Ruby on Rails, utilizando gemas como Devise, Impersonate, Ransack y Prawn para construir funcionalidades y optimizar el rendimiento. Desarrollé pruebas unitarias para controllers, models y services usando RSpec, asegurando alta calidad y mantenibilidad del código. Implementé interacciones dinámicas de usuario usando jQuery y JavaScript vanilla, integrando componentes de React.js para funcionalidades específicas cuando fue necesario. Gestioné despliegues de la aplicación e infraestructura de servidores mediante Cloud66, asegurando una entrega fluida y confiable de actualizaciones. Colaboré estrechamente con stakeholders para recopilar y traducir requerimientos del cliente en funcionalidades de alto impacto, dentro de un ambiente Agile Scrum."
     },
     "start_date": "2024-08-03",
     "end_date": "2025-07-03",
@@ -44,6 +49,8 @@
       "Devise",
       "Ransack",
       "Prawn",
+      "jQuery",
+      "React.js",
       "Cloud66",
       "PostgreSQL"
     ]
@@ -53,14 +60,14 @@
     "position": 3,
     "company": "GFT Technologies",
     "job_title": {
-      "en": "SSr. Ruby on Rails Engineer",
-      "es": "Ingeniero SSr. Ruby on Rails"
+      "en": "Senior Ruby on Rails Engineer",
+      "es": "Ingeniero Senior en Ruby on Rails"
     },
     "description": {
-      "en": "Maintenance and evolution of a Ruby on Rails API, including asynchronous job processing, XML handling, integration with external microservices, automated testing with RSpec, and project management through Azure DevOps. Develop and optimize invoice-processing pipelines handling 100,000+ invoices per month, ensuring scalability and reliability. Implement automated tests for controllers and models using RSpec, increasing test coverage from 60% to 80%. Deploy and maintain applications on AWS EC2, leveraging Docker containers to streamline infrastructure and deployments.",
-      "es": "Mantenimiento y evolución de una API Ruby on Rails, incluyendo procesamiento de trabajos asíncronos, manejo de XML, integración con microservicios externos, pruebas automatizadas con RSpec y gestión de proyectos a través de Azure DevOps. Desarrollo y optimización de pipelines de procesamiento de facturas manejando más de 100,000 facturas por mes, asegurando escalabilidad y confiabilidad. Implemento pruebas automatizadas para controladores y modelos usando RSpec, incrementando la cobertura de pruebas del 60% al 80%. Despliego y mantengo aplicaciones en AWS EC2, aprovechando contenedores Docker para optimizar infraestructura y despliegues."
+      "en": "Joined as a Semi-senior Ruby on Rails Engineer for client Ecosistemas de Negocio Colombia and was promoted to Senior after one year for consistently strong performance. Maintained and evolved a Ruby on Rails API for a B2B electronic invoicing platform, including asynchronous job processing, XML handling, and integration with external microservices; testing with RSpec and project management through Azure DevOps. Developed and optimized invoice-processing pipelines handling 100,000+ invoices per month, ensuring scalability and reliability. Managed asynchronous background jobs and XML data integration for seamless data exchange with external microservices. Implemented automated tests for controllers and models with RSpec, increasing test coverage from 60% to 80%. Deployed and maintained applications on AWS EC2 using Docker containers to streamline infrastructure and deployments. Utilized Azure DevOps for efficient project management, and PostgreSQL for database management and optimization.",
+      "es": "Ingresé como Ingeniero Semi-senior en Ruby on Rails para el cliente Ecosistemas de Negocio Colombia y fui promovido a Senior después de un año por mi desempeño consistentemente sólido. Mantuve y evolucioné una API en Ruby on Rails para una plataforma B2B de facturación electrónica, incluyendo procesamiento de jobs asíncronos, manejo de XML, e integración con microservicios externos; pruebas con RSpec y gestión de proyecto mediante Azure DevOps. Desarrollé y optimicé pipelines de procesamiento de facturas manejando más de 100,000 facturas mensuales, garantizando escalabilidad y confiabilidad. Gestioné jobs asíncronos en segundo plano e integración de datos XML para un intercambio de datos fluido con microservicios externos. Implementé pruebas automatizadas para controllers y models con RSpec, incrementando la cobertura de pruebas del 60% al 80%. Desplegué y mantuve aplicaciones en AWS EC2 usando contenedores Docker para optimizar la infraestructura y los despliegues. Utilicé Azure DevOps para una gestión de proyecto eficiente, y PostgreSQL para la gestión y optimización de bases de datos."
     },
-    "start_date": "2023-03-03",
+    "start_date": "2022-03-03",
     "end_date": "2024-07-03",
     "location": "Remote",
     "company_url": "https://www.gft.com",
@@ -70,7 +77,8 @@
       "AWS EC2",
       "Docker",
       "Azure DevOps",
-      "XML"
+      "XML",
+      "PostgreSQL"
     ]
   },
   {
@@ -82,8 +90,8 @@
       "es": "Ingeniero Jr. Ruby on Rails"
     },
     "description": {
-      "en": "Develop and maintain a document management platform designed to support ISO certification compliance, contributing across backend, frontend and CI/CD workflows. Build and maintain core features from the stakeholders requirements. Achieve 85% test coverage using Minitest, significantly reducing post-release bugs. Improve frontend interactivity using StimulusJS and enhance UI using CSS/Sass. Implement CI/CD pipelines with GitHub Actions to automate testing and deployments, increasing system reliability. Migrate 70% of views from Rails ERB to React.js, improving performance and overall UX.",
-      "es": "Desarrollo y mantenimiento de una plataforma de gestión de documentos diseñada para soportar cumplimiento de certificación ISO, contribuyendo en backend, frontend y flujos de CI/CD. Construyo y mantengo funcionalidades centrales desde los requisitos de stakeholders. Logro 85% de cobertura de pruebas usando Minitest, reduciendo significativamente bugs post-lanzamiento. Mejoro interactividad del frontend usando StimulusJS y mejoro la UI usando CSS/Sass. Implemento pipelines CI/CD con GitHub Actions para automatizar pruebas y despliegues, incrementando la confiabilidad del sistema. Migro 70% de vistas de Rails ERB a React.js, mejorando rendimiento y UX general."
+      "en": "Contributed to a consulting firm providing quality management and compliance services for businesses in Colombia, focused on internal audits and document control, developing and maintaining a Ruby on Rails monolith supporting ISO certification compliance workflows. Maintained and enhanced the Rails monolith, developing new modules and resolving bugs to expand application functionality. Migrated 70% of views from Rails ERB to React, using Bootstrap and Sass for a responsive, modern UI. Achieved 85% test coverage using Minitest, significantly reducing post-release bugs. Implemented Okta authentication for secure user access, and StimulusJS for improved frontend interactivity. Deployed the application on Heroku and implemented CI/CD pipelines with GitHub Actions, increasing system reliability.",
+      "es": "Contribuí en una firma consultora que brindaba servicios integrales de gestión de calidad y cumplimiento normativo para empresas en Colombia, enfocada en auditorías internas y control documental, desarrollando y manteniendo un monolito en Ruby on Rails que soportaba flujos de cumplimiento de certificación ISO. Mantuve y mejoré el monolito en Rails, desarrollando nuevos módulos y resolviendo errores para expandir la funcionalidad de la aplicación. Migré el 70% de las vistas de Rails ERB a React, utilizando Bootstrap y Sass para una interfaz responsiva y moderna. Alcancé un 85% de cobertura de pruebas usando Minitest, reduciendo significativamente los errores post-lanzamiento. Implementé autenticación con Okta para un acceso seguro de usuarios, y StimulusJS para mejorar la interactividad del frontend. Desplegué la aplicación en Heroku e implementé pipelines de CI/CD con GitHub Actions, incrementando la confiabilidad del sistema."
     },
     "start_date": "2020-03-03",
     "end_date": "2022-02-03",
@@ -92,10 +100,13 @@
     "technologies": [
       "Ruby on Rails",
       "React.js",
-      "StimulusJS",
+      "Bootstrap",
+      "Sass",
       "Minitest",
+      "Okta",
+      "Heroku",
       "GitHub Actions",
-      "CSS/Sass"
+      "StimulusJS"
     ]
   }
 ]

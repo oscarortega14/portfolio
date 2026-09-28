@@ -13,7 +13,7 @@ const experiences = (experiencesData as ExperienceType[]).slice().sort((a, b) =>
 function formatPeriod(start: string, end: string | null, presentLabel: string): string {
   const fmt = (d: string) => {
     const date = new Date(d);
-    return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+    return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
   };
   return `${fmt(start)} — ${end ? fmt(end) : presentLabel}`;
 }

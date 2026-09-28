@@ -9,7 +9,7 @@
   },
   "about": {
     "title": "Sobre mí",
-    "description": "Ingeniero backend senior enfocado en Ruby on Rails, con experiencia práctica en React, TypeScript e infraestructura en la nube.",
+    "description": "Ingeniero de software senior radicado en Armenia, Colombia, enfocado en Ruby on Rails, con experiencia adicional en backend con Python (gRPC) y experiencia práctica en React, TypeScript e infraestructura en la nube.",
     "skillsTitle": "Habilidades",
     "linkedin": "LinkedIn",
     "contact": "Contacto"
@@ -17,6 +17,11 @@
   "experience": {
     "title": "Experiencia",
     "currentLabel": "Actualidad"
+  },
+  "certifications": {
+    "title": "Certificaciones",
+    "issued": "Emitido",
+    "inProgress": "En Progreso"
   },
   "projects": {
     "title": "Proyectos",
@@ -33,6 +38,7 @@
     "hero": "Inicio",
     "about": "Sobre mí",
     "experience": "Experiencia",
+    "certifications": "Certificaciones",
     "projects": "Proyectos",
     "contact": "Contacto"
   },

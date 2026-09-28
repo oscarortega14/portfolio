@@ -35,6 +35,16 @@ export type Category = {
   slug: string;
 };
 
+export type Certification = {
+  id: number;
+  position: number;
+  name: string;
+  issuer: string;
+  issued_date: string | null;   // ISO yyyy-mm-dd; null when in_progress is true
+  in_progress: boolean;
+  credential_url: string | null;
+};
+
 export type SkillGroup = 'backend' | 'frontend' | 'devops' | 'database';
 
 export type Skill = {

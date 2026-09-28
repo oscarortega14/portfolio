@@ -48,7 +48,7 @@ export default function Contact() {
           <div className="flex justify-center mb-10">
             <HologramButton
               as="a"
-              href="mailto:ortegaoscar14@gmail.com"
+              href="mailto:oscardeveloper14@gmail.com"
               icon={<Mail size={14} />}
             >
               {t('contact.cta')}
@@ -62,7 +62,7 @@ export default function Contact() {
             <SocialLink href="https://github.com/oscarortega14" label="GitHub">
               <GithubIcon size={22} />
             </SocialLink>
-            <SocialLink href="mailto:ortegaoscar14@gmail.com" label="Email">
+            <SocialLink href="mailto:oscardeveloper14@gmail.com" label="Email">
               <Mail size={22} />
             </SocialLink>
           </div>

@@ -7,6 +7,7 @@ const SECTIONS = [
   { id: 'hero', key: 'nav.hero' },
   { id: 'about', key: 'nav.about' },
   { id: 'experience', key: 'nav.experience' },
+  { id: 'certifications', key: 'nav.certifications' },
   { id: 'projects', key: 'nav.projects' },
   { id: 'contact', key: 'nav.contact' },
 ] as const;

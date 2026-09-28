@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "position": 1,
+    "name": "Certified Partner Specialist – Gemini Enterprise Agent Development",
+    "issuer": "Google",
+    "issued_date": "2026-07-01",
+    "in_progress": false,
+    "credential_url": null
+  },
+  {
+    "id": 2,
+    "position": 2,
+    "name": "Deploy an Agent with Agent Development Kit (ADK)",
+    "issuer": "Google",
+    "issued_date": "2026-06-01",
+    "in_progress": false,
+    "credential_url": null
+  },
+  {
+    "id": 3,
+    "position": 3,
+    "name": "Evaluate and Improve Agent Development Kit Agents",
+    "issuer": "Google",
+    "issued_date": "2026-07-01",
+    "in_progress": false,
+    "credential_url": null
+  },
+  {
+    "id": 4,
+    "position": 4,
+    "name": "Accelerate Development with Antigravity",
+    "issuer": "Google",
+    "issued_date": "2026-07-01",
+    "in_progress": false,
+    "credential_url": null
+  },
+  {
+    "id": 5,
+    "position": 5,
+    "name": "OpenAI Cyber Deployment Practitioner",
+    "issuer": "OpenAI",
+    "issued_date": "2026-09-01",
+    "in_progress": false,
+    "credential_url": null
+  },
+  {
+    "id": 6,
+    "position": 6,
+    "name": "Anthropic Certification",
+    "issuer": "Anthropic",
+    "issued_date": null,
+    "in_progress": true,
+    "credential_url": null
+  }
+]

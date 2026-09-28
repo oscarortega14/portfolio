@@ -75,7 +75,7 @@ export default function About() {
             </HologramButton>
             <HologramButton
               as="a"
-              href="mailto:ortegaoscar14@gmail.com"
+              href="mailto:oscardeveloper14@gmail.com"
               variant="outline"
               icon={<Mail size={14} />}
             >
