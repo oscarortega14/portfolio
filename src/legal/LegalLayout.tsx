@@ -7,9 +7,10 @@ import type { LegalContent } from './legalContent';
 type Props = {
   content: LegalContent;
   lastUpdated: string;
+  appName?: string;
 };
 
-export default function LegalLayout({ content, lastUpdated }: Props) {
+export default function LegalLayout({ content, lastUpdated, appName = 'Stickerswap' }: Props) {
   const { locale } = useLocalized();
   const cursor = useCursorHover();
   const c = content[locale];
@@ -80,7 +81,7 @@ export default function LegalLayout({ content, lastUpdated }: Props) {
             opacity: 0.6,
           }}
         >
-          © {new Date().getFullYear()} Oscar Ortega · Stickerswap
+          © {new Date().getFullYear()} Oscar Ortega · {appName}
         </div>
       </div>
     </section>
