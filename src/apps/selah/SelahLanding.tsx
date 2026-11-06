@@ -28,7 +28,7 @@ import { SELAH_REPO } from '@/legal/selahContent';
 const STORE = {
   appStore: null as string | null,
   playStore: null as string | null,
-  microsoftStore: null as string | null,
+  microsoftStore: 'https://apps.microsoft.com/detail/9NP5ZZWWGLFK' as string | null,
 };
 const RELEASES = `${SELAH_REPO}/releases/latest`;
 const GUIDE = `${SELAH_REPO}/raw/main/docs/Guia-voluntarios-Selah.pdf`;
