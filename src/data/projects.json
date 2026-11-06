@@ -76,5 +76,31 @@
     "published": true,
     "featured": true,
     "position": 3
+  },
+  {
+    "id": 4,
+    "title": {
+      "en": "Selah",
+      "es": "Selah"
+    },
+    "description": {
+      "en": "Free, open-source software for projecting song lyrics and Bible verses in churches, with a remote control from any phone on the same Wi-Fi. Kotlin Multiplatform: a Windows app (Compose Desktop + embedded Ktor server with PIN-protected WebSockets) and a shared Compose Multiplatform remote for iPhone and Android. Signed auto-updates, offline Bible search and zero data collection.",
+      "es": "Programa libre y gratuito para proyectar letras de canciones y la Biblia en iglesias, con control remoto desde cualquier celular en el mismo Wi-Fi. Kotlin Multiplatform: app de Windows (Compose Desktop + servidor Ktor embebido con WebSockets protegidos por clave) y un control remoto compartido en Compose Multiplatform para iPhone y Android. Actualizaciones firmadas, Biblia sin internet y cero recopilación de datos."
+    },
+    "technologies": [
+      "Kotlin Multiplatform",
+      "Compose Multiplatform",
+      "Ktor",
+      "SwiftUI",
+      "Android"
+    ],
+    "github_url": "https://github.com/oscarortega14/selah",
+    "live_url": "https://oortega14.com/apps/selah",
+    "app_store_url": null,
+    "play_store_url": null,
+    "image_url": "/apps/selah/destacado.jpg",
+    "published": true,
+    "featured": true,
+    "position": 4
   }
 ]
