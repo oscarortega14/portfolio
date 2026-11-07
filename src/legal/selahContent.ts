@@ -2,7 +2,7 @@ import type { LegalContent } from './legalContent';
 import { APP_CONTACT_EMAIL, APP_DEVELOPER } from './legalContent';
 
 export const SELAH_NAME = 'Selah';
-export const SELAH_LAST_UPDATED = '2026-11-05';
+export const SELAH_LAST_UPDATED = '2026-11-07';
 export const SELAH_REPO = 'https://github.com/oscarortega14/selah';
 
 export const selahPrivacyContent: LegalContent = {
@@ -48,6 +48,7 @@ export const selahPrivacyContent: LegalContent = {
         body: [
           'Las versiones de App Store y Google Play no usan internet: solo la red local.',
           'La versión que se descarga desde GitHub consulta al abrirse si hay una versión nueva (en api.github.com). No envía datos tuyos.',
+          'El programa del computador usa internet solo cuando tú lo pides: para buscar fondos en Pixabay o descargar Biblias gratuitas de eBible.org. No envía datos tuyos.',
         ],
       },
       {
@@ -105,6 +106,7 @@ export const selahPrivacyContent: LegalContent = {
         body: [
           'The App Store and Google Play versions do not use the internet: local network only.',
           'The version downloaded from GitHub checks for a new version when it opens (at api.github.com). It sends no personal data.',
+          'The computer program uses the internet only when you ask it to: to search backgrounds on Pixabay or download free Bibles from eBible.org. It sends no personal data.',
         ],
       },
       {
