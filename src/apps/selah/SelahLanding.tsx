@@ -26,7 +26,7 @@ import { SELAH_REPO } from '@/legal/selahContent';
  * Cuando una tienda apruebe la app, poner aquí su enlace y el botón se activa solo.
  */
 const STORE = {
-  appStore: null as string | null,
+  appStore: 'https://apps.apple.com/app/id6831222748' as string | null,
   playStore: null as string | null,
   microsoftStore: 'https://apps.microsoft.com/detail/9NP5ZZWWGLFK' as string | null,
 };
