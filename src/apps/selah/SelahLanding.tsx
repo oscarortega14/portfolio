@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
@@ -48,7 +47,6 @@ const c = {
 
 const content = {
   es: {
-    metaTitle: 'Selah — letras y Biblia para el videobeam de tu iglesia',
     tagline: 'Letras y Biblia en el videobeam de tu iglesia, controladas desde el celular.',
     sub: 'Pensado para los voluntarios: se aprende en minutos. Gratis, de código abierto, sin publicidad y sin cuentas.',
     ctaWindows: 'Descargar para Windows',
@@ -93,7 +91,6 @@ const content = {
     footer: 'Hecho por Oscar Ortega · Licencia MIT',
   },
   en: {
-    metaTitle: 'Selah — lyrics and Bible for your church projector',
     tagline: "Lyrics and Bible on your church's projector, controlled from your phone.",
     sub: 'Made for volunteers: you learn it in minutes. Free, open source, no ads and no accounts.',
     ctaWindows: 'Download for Windows',
@@ -204,14 +201,6 @@ export default function SelahLanding() {
   const { locale } = useLocalized();
   const { i18n } = useTranslation();
   const t = content[locale];
-
-  useEffect(() => {
-    const prev = document.title;
-    document.title = t.metaTitle;
-    return () => {
-      document.title = prev;
-    };
-  }, [t.metaTitle]);
 
   return (
     <div style={{ background: c.bg, color: c.text, minHeight: '100vh' }}>
