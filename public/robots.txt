@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oortega14.com/sitemap.xml
